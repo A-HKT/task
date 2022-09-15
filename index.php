@@ -58,11 +58,10 @@ $done_tasks = find_task_by_done(TASK_DONE);
                 <?php foreach ($notyet_tasks as $task) : ?>
                     <li class="one-task">
                         <a href="done.php?id=<?= h($task['id']) ?>&status=<?= TASK_DONE ?>" class="btn check-btn done-btn"><i class="fa-solid fa-check"></i></a>
-
                         <p><?= h($task['title']) ?></p>
                         <div class="btn-set">
                             <a href="edit.php?id=<?= h($task['id']) ?>" class="btn edit-btn"><i class="fa-solid fa-pencil"></i></a>
-                            <a href="" class="btn delete-btn"><i class="fa-solid fa-trash-can"></i></a>
+                            <a href="delete.php?id=<?= h($task['id']) ?>" class="btn delete-btn"><i class="fa-solid fa-trash-can"></i></a>
                         </div>
                     </li>
                 <?php endforeach; ?>
@@ -77,7 +76,7 @@ $done_tasks = find_task_by_done(TASK_DONE);
                         <p><?= h($task['title']) ?></p>
                         <div class="btn-set">
                             <a href="edit.php?id=<?= h($task['id']) ?>" class="btn edit-btn"><i class="fa-solid fa-pencil"></i></a>
-                            <a href="" class="btn delete-btn"><i class="fa-solid fa-trash-can"></i></a>
+                            <a href="delete.php?id=<?= h($task['id']) ?>" class="btn delete-btn"><i class="fa-solid fa-trash-can"></i></a>
                         </div>
                     </li>
                 <?php endforeach; ?>
